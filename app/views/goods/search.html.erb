@@ -1,0 +1,15 @@
+  <h1>Rakuten Serach</h1>
+<div class='goods-content'>
+    <div class="search-box">
+      <%= form_with url: rakuten_search_path, method: :get, local: true do |f| %>
+        <%= f.text_field :keyword %>
+        <%= f.submit '検索' %>
+        <% end %>
+    </div>
+</div>
+    
+  <h2>検索結果</h2>
+  <% if params[:keyword].present? %>
+ 
+  <%= render "good_list" %>
+  <% end %>

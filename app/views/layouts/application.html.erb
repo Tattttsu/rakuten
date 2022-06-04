@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <header class = "navbar" >
+      <div class = "container" >
+        <%= link_to "rakuten search", root_path, id: "logo" %>
+        <nav>
+          <ul class = "nav">
+            <li><%= link_to "探す",search_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
+            <li><%= link_to "ログイン", user_session_path %></li>
+            <li><%= link_to "マイページ", "#" %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

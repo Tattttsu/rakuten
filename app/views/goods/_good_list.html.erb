@@ -1,4 +1,5 @@
- <% @goods.first(10).each do |item| %>
+
+ <% @goods.each do |item| %>
               <div class="goods-list">
                 <div class="goods-img">
                   <li><img src="<%= item['mediumImageUrls'][0] %>"></li>

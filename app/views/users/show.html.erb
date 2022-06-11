@@ -1,0 +1,11 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<%= @user.email %>
+<%= item =@item %>
+
+<% @bookmarks_code.each do |bookmark_code|  %>
+<% @goods = RakutenWebService::Ichiba::Item.search(itemCode: bookmark_code) %>
+<%= render "layouts/good_list" %>
+<% end %>
+
